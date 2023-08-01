@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Simon the Game!</title>
+    <link href="/static/stylesheets/simon/simon.css" rel='stylesheet'>
+    <meta name="viewport" content="initial-scale=1">
+</head>
+<main id = 'body'>
+    <div id='scores'>
+        <div id=currentLevel class='text'>Level: </div>
+        <div id='highLevel' class = 'text'>Highest Level: </div>
+        </div>
+    <div id='messageContain'></div>
+    <div id='gameArea'>
+    <button id='green' class='button'></button>
+    <button id='red' class='button'></button>
+    <button id='yellow' class = 'button'></button>
+    <button id='blue' class='button'></button>
+        <div id="center"></div>
+    </div>
+    <div id='information'>
+        <button id = 'rules' class= 'infobtn'>Simon Rules</button>;
+        <button id= 'about' class = 'infobtn'>Short description</button>;
+    </div>
+    
+    <script src="/static/js/simon/Board.js"></script>
+    <script src="/static/js/simon/Game.js"></script>
+    <script src='/static/js/simon/Player.js'></script>
+    <script src="/static/js/simon/Button.js"></script>
+    <script src='/static/js/simon/app.js'></script>
+    <script src='/static/js/simon/dialog.js'></script>
+</main> 
+</html>

@@ -1,0 +1,143 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.blurryContainer {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+}
+/*
+.projBtn {
+  padding: 0;
+  display: flex;
+  width: 25rem;
+  height: 14rem;
+  max-width: 90vw;
+  box-sizing: border-box;
+  border: 6px inset rgba(0, 0, 255, 0.8);
+  position: relative;
+  margin: 0 20px 20px 0;
+  border-radius: 20px;
+}
+
+@media (hover: hover) {
+  .projBtn {
+    overflow: hidden;
+  }
+  .projBtn span {
+    top: 0;
+    right: -5px;
+    bottom: 0;
+    left: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+    transform: translateX(100%);
+    transition: all ease-out 0.5s;
+    padding-right: 10px;
+  }
+  .projBtn:hover span,
+  .projBtn:focus span {
+    transform: translateX(0%);
+  }
+  .projBtn span p {
+    text-align: end;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .projBtn span p:nth-child(1) {
+    width: 90%;
+  }
+  .projBtn span p:nth-child(2) {
+    width: 80%;
+  }
+  .projBtn span p:nth-child(3) {
+    width: 75%;
+  }
+}
+@media (hover: none) {
+  .projBtn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 14rem;
+    box-shadow: 0 20px 10px -10px black;
+  }
+  .projBtn span {
+    z-index: -1;
+    width: 90%;
+    top: 100%;
+    padding-top: 5px;
+    box-sizing: border-box;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .projBtn span p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 440px) {
+  .projBtn {
+    height: auto;
+  }
+}
+.projBtn img {
+  width: 100%;
+  border-radius: 20px;
+}
+.projBtn span {
+  position: absolute;
+  background-color: rgba(25, 25, 25, 0.5);
+  color: white;
+  font-size: 1.2rem;
+}
+
+span p1 {
+}
+
+.projBtn:hover span {
+  transform: translateX(0%);
+}
+*/
+
+/* start for past work:*/
+
+#EE {
+  background-image: url("/static/images/main/mep-plans.jpeg");
+}
+#PLC {
+  background-image: url("/static/images/main/siemens-controls.png");
+}
+.pastWork {
+  background-blend-mode: lighten;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-position: top;
+  background-size: cover;
+  background-color: rgba(245, 255, 255, 0.65);
+  width: 80vw;
+  padding: 3rem 2rem;
+  color: black;
+}
+
+.pastWork div {
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.apps img {
+  height: 1.5rem;
+  margin: 0.5rem;
+}
+.breaker {
+  width: 100%;
+  margin: 10px;
+}

@@ -1,0 +1,8 @@
+form(id="search", method="get", action='/result')
+   input(type='text',id="search", name="search", placeholder="Anything else?")
+   button.home(type="submit") Submit
+   legend What are you looking for?
+   input#def(type='radio' value='Definition'  name='requesting' checked)
+   label(for='def') Definition
+   input#thes(type='radio', value='Thesaurus', name='requesting')
+   label(for='thes') Thesaurus

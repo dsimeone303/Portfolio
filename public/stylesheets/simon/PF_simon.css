@@ -1,0 +1,296 @@
+body{
+
+    background-color: darkblue; 
+}
+html,body,header {
+    margin:0;
+    padding:0;
+}
+header {
+   width: 100vw;
+}
+.fontMono {
+    font-family: 'Xanh Mono', monospace;
+}
+.fontHW {
+    font-family: 'Ms Madi', cursive;
+}
+.fontARI {
+    font-family: 'Aref Ruqaa Ink', serif;
+}
+
+/*Main Block Header*/
+
+.text{
+    color:white;
+    padding: 40px;
+    font-size: 25px;
+}
+
+.button{
+    display:flex;
+    transition: background-color .1s ease;
+    transition: transform .1s ease;
+    margin: auto;
+}
+.infobtn {
+    max-width: 200px;
+    width:100%;
+    height: 40px;
+    background-color:yellow;
+    font-size: 20px;
+    border: solid 5px orange; 
+    border-radius: 10px;
+}
+.infobtn:active {
+    background-color: orange;
+    border-color:yellow;
+}
+
+
+
+/*ID's*/
+#startcontain {
+    position:absolute;
+    width:100%;
+    max-width:1200px;
+    align-content: center;
+    margin-top:-70px;
+    z-index: 1;
+}
+
+#startbtn {
+    
+    border: 5px solid black;
+    padding: 15px 70px;
+    margin: 30px;
+    border-radius: 15px;
+    font-size: 30px;
+    transition: transform .3s ease;
+    transition: border-color .2 ease;
+}
+#startbtn:hover{
+    transform:scale(1.1);
+}
+#startbtn:active{
+    border-color:ghostwhite;
+}
+
+#resetbtn{
+    border: 5px solid black;
+    padding: 15px 40px;
+    margin: auto;
+    border-radius: 15px;
+    font-size: 20px;
+    
+    transition: border-color .2s ease;
+    
+}
+#resetbtn:active{
+    border-color: ghostwhite; 
+}
+
+/* promps: (container,gameover,nextlevel,begin*/
+
+#messageContain {
+    width: 100% ;
+    position:absolute;
+    z-index: 5;
+
+
+}
+#messageContain span {
+    display:table;
+    margin: auto;
+    text-align: center;
+    align-content: center;
+    border: solid 5px lightgray;
+    border-radius: 20px;
+     background-color:lightcyan;
+    padding: 5px;
+      font-size: 30px;
+}
+
+#scores{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align: center;
+    object-position:center;
+    width:100%;
+}
+
+#gameArea{
+    box-sizing: border-box;
+    display:grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(2,auto);
+    grid-row-gap: 1vh;
+    max-width:575px;
+    max-height:575px;
+    width: 70vw;
+    height: 70vw;
+    text-align:center;
+    align-content: center;
+    margin:auto auto;
+    padding:1vh;
+    border: 15px solid black;
+    border-radius: 50%;
+    position:relative;
+    justify-items:center;
+}
+
+#center{
+    position:absolute;
+    box-sizing: border-box;
+    border-radius:50%;
+    width: 20vw;
+    height:20vw;
+    max-width:172px;
+    max-height: 172px;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    margin:auto;
+    background-color:darkblue;
+}
+#green{
+    background-color:green;
+    border: solid 10px darkgreen;
+    width: 30vw;
+    height: 30vw;
+    max-width:260px;
+    max-height:260px;
+    border-radius: 30vh 0 0 0;
+}
+#green:active {
+    background-color:#7CFC00;
+    transform: scale(1.1);
+}
+#greenactive{
+    background-color:#7CFC00;
+    border: solid 10px darkgreen;
+    transform: scale(1.1);
+    width: 30vw;
+    height: 30vw;
+    max-width:260px;
+    max-height:260px;
+    border-radius: 30vh 0 0 0;
+}  
+#red{
+    background-color:lightcoral;
+    border: solid 10px darkred;
+    width: 30vw;
+    height: 30vw;
+    max-width:260px;
+    max-height:260px;
+    border-radius: 0 30vh 0 0;
+}
+#red:active {
+    background-color:red;
+    transform: scale(1.1);
+    
+}
+#redactive {
+    background-color:red;
+    border: solid 10px darkred;
+    transform: scale(1.1);
+    width: 30vw;
+    height: 30vw;
+    max-width:260px;
+    max-height:260px;
+    border-radius: 0 30vh 0 0;
+}
+
+#yellow{
+    background-color:#FFDB58;
+    border: solid 10px #DBA800;
+    width: 30vw;
+    height: 30vw;
+    max-width:260px;
+    max-height:260px;
+    border-radius: 0 0 0 30vh;
+}
+#yellow:active {
+    background-color:#FFFF00;
+    transform: scale(1.1);
+}
+#yellowactive {
+    background-color:#FFFF00;
+    border: solid 10px #DBA800;
+    transform: scale(1.1);
+    width: 30vw;
+    height: 30vw;
+    max-width:260px;
+    max-height:260px;
+    border-radius: 0 0 0 30vh;
+}
+#blue{
+    background-color:#2E4DA7;
+    border: solid 10px blue;
+    width: 30vw;
+    height: 30vw;
+    max-width:260px;
+    max-height:260px;
+    border-radius: 0 0 30vh 0;
+}
+#blue:active {
+    background-color:#0096FF;
+    transform: scale(1.1);
+}
+#blueactive {
+    background-color:#0096FF;
+    border: solid 10px blue;
+    transform: scale(1.1);
+    width: 30vw;
+    height: 30vw;
+    max-width:260px;
+    max-height:260px;
+    border-radius: 0 0 30vh 0;
+}
+
+#information{
+    padding-top: 20px;
+    width:100%;
+text-align:center;
+}
+
+#popup {
+    position:absolute;
+    color:ghostwhite;
+    bottom: 100px;
+    background-color:black;
+    border:solid 8px ghostwhite;
+    border-radius: 10px;
+    padding: 50px;
+    width: 30%;
+    height: content;
+    margin: 25%;
+}
+
+h2{
+    margin-top:0;
+}
+#exitbtn{
+ position:absolute;
+    top:5px;
+    right:5px;
+    background-color:black;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+@media (max-width: 500px) {
+    #logo a[class=name] {
+        font-size: 5vw;
+    }
+    #scores {
+        display:flex;
+        flex-wrap:wrap;
+        margin-bottom: 20px;
+    }
+    .text {
+        padding: 20px;
+    }
+}

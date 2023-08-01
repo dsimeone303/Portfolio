@@ -1,0 +1,48 @@
+extends layout.pug
+block head
+ -var word = dataArray.word
+ title What's the #{word}
+
+block content
+ div#mainBacker.bgTeaGreen
+ a(href="/whatsthedef")
+  button.home New Search
+  -var wants = dataArray.want
+  -var dataset = dataArray.data 
+ #results
+   #Rtitle #{wants} Results for "#{word}":
+     if errormessage
+      ul
+       li=errormessage
+     else if wants ==="Definition"  
+         ul
+          each type in dataset
+           li
+            h3=type[0] + ':'
+            h4=type[1]
+            ul
+             each def in type[2]
+              li=def
+            hr
+     else if wants === "Thesaurus"
+      ul 
+       each type in dataset
+         h3=type[0] + ':'
+         h4=type[1]
+         ul
+          each def in type[2]
+           li.nobold=def
+         h4 Synonym(s):
+         div.flexw
+          each syn in type[3]
+           button.nobold.thesResults=syn
+         h4 Antonym(s):
+         div.flexw
+          each ants in type[4]
+           button.nobold.thesResults=ants
+         hr
+ script(src="/static/js/Pop-ups.js", type="text/javaScript")
+        
+     
+  
+ 

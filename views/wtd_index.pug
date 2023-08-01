@@ -1,0 +1,18 @@
+extends layout.pug
+block head
+  title What's the Def?
+  
+block content
+      div#mainBacker.bgTeaGreen
+      #title WHAT'S THE DEF?
+      form#search(method='get' action='/whatsthedef/result')
+        div.searchdiv
+          input#search.bgPaleG.txtBlackOlive(type='text' name='search' placeholder='How may I help?')
+          button.home.bgPaleG.txtBlackOlive(type='submit') Submit
+        legend What are you looking for?
+        input#def(type='radio' value='Definition'  name='requesting' checked)
+        label(for='def') Dictionary
+        input#thes(type='radio', value='Thesaurus', name='requesting')
+        label(for='thes') Thesaurus
+      if message
+       p.error=message

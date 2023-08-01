@@ -1,0 +1,406 @@
+.castoro {
+  font-family: "Castoro Titling", cursive;
+}
+.headername {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 0.2rem;
+}
+
+main {
+  width: 100%;
+}
+#content-centered {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  transform: perspective(1000px);
+}
+#skills {
+  padding-bottom: 0.8rem;
+}
+#skills img {
+  padding: 0 5px;
+  height: 30px;
+}
+#location {
+  color: grey;
+  font-size: 0.8rem;
+  text-decoration: none;
+  padding-bottom: 0.8rem;
+}
+.social img {
+  height: 30px;
+}
+.navbtns {
+  padding-bottom: 0.8rem;
+}
+main section {
+  padding-bottom: 0.8rem;
+}
+.black-expand-btmbdr-btn {
+  border: none;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  font-weight: 600;
+  color: black;
+}
+.black-expand-btmbdr-btn::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: black;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: -webkit-transform ease 0.35s;
+  transition: -webkit-transform ease 0.35s;
+  -o-transition: transform ease 0.35s;
+  transition: transform ease 0.35s;
+  transition: transform ease 0.35s, -webkit-transform ease 0.35s;
+}
+.black-expand-btmbdr-btn:hover::after,
+.black-expand-btmbdr-btn:focus::after {
+  -webkit-transform: scaleX(100%);
+  -ms-transform: scaleX(100%);
+  transform: scaleX(100%);
+}
+
+.r,
+.g,
+.b {
+  background-color: transparent;
+  margin: 0 1rem;
+  padding-top: 5px;
+  width: 150px;
+  border-radius: 20px;
+  transition: all 0.2s ease-in;
+  border: solid 2px transparent;
+}
+.r:hover {
+  border: solid 2px red;
+  transform: translateY(-0.4rem);
+}
+.g:hover {
+  border: solid 2px green;
+  transform: translateY(-0.4rem);
+}
+.b:hover {
+  border: solid 2px blue;
+  transform: translateY(-0.4rem);
+}
+
+#catagories {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+#catagories > button::after {
+  content: "";
+  border-radius: 20px;
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  height: 3px;
+  width: 100px;
+  filter: blur(3px);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.2s ease-in all;
+}
+#catagories > button:hover::after {
+  background-color: rgba(0, 0, 0, 0.3);
+  filter: blur(2px);
+  width: 80px;
+  /*transform: translateY(0.6rem)*/
+}
+#catagories img {
+  height: 75px;
+  position: relative;
+  z-index: -1;
+}
+#catagories span {
+  position: relative;
+  z-index: -1;
+}
+#catagories button {
+  position: relative;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+#PopupBackground {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.5);
+  filter: blur(2em);
+}
+
+#intropara {
+  width: 90vw;
+  max-width: 800px;
+}
+
+/*
+for pop ups
+*/
+
+#blurry {
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  -webkit-backdrop-filter: blur(8px) grayscale(0.75);
+  backdrop-filter: blur(8px) grayscale(0.75);
+  z-index: 50000;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: column;
+}
+.blurry_ani_in {
+  opacity: 0;
+  -webkit-animation-name: intoView;
+  animation-name: intoView;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.blurry_ani_out {
+  opacity: 0;
+  -webkit-animation-name: outOfView;
+  animation-name: outOfView;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes intoView {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+}
+@keyframes intoView {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+}
+@-webkit-keyframes outOfView {
+  0% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes outOfView {
+  0% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.blurry div div {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+/*for when blurry is open, freeze body background.*/
+.modal-open {
+  height: 100vh;
+}
+#blurry div {
+  max-width: 1500px;
+  padding-top: 25px;
+}
+
+/*
+for Project Popup:
+*/
+.blurryContainer {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+}
+.projBtn {
+  padding: 0;
+  display: flex;
+  width: 25rem;
+  height: 14rem;
+  max-width: 90vw;
+  box-sizing: border-box;
+  border: 1px inset gray;
+  position: relative;
+  margin: 0 20px 20px 0;
+  border-radius: 20px;
+}
+
+@media (hover: hover) {
+  .projBtn {
+    overflow: hidden;
+  }
+  .projBtn span {
+    top: 0;
+    right: -5px;
+    bottom: 0;
+    left: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+    transform: translateX(100%);
+    transition: all ease-out 0.5s;
+    padding-right: 10px;
+  }
+  .projBtn:hover span,
+  .projBtn:focus span {
+    transform: translateX(0%);
+  }
+  .projBtn span p {
+    text-align: end;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  /*for future plans bebest to do this with javascript to figure out the location of the start and end of the text so it doesn't get cut off*/
+  .projBtn span p:nth-child(1) {
+    width: 90%;
+  }
+  .projBtn span p:nth-child(2) {
+    width: 80%;
+  }
+  .projBtn span p:nth-child(3) {
+    width: 75%;
+  }
+}
+@media (hover: none) {
+  .projBtn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 14rem;
+    box-shadow: 0 20px 10px -10px black;
+  }
+  .projBtn img {
+    border-radius: 15px;
+  }
+  .projBtn span {
+    z-index: -1;
+    width: 90%;
+    top: 100%;
+    padding-top: 5px;
+    box-sizing: border-box;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .projBtn span p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 440px) {
+  .projBtn {
+    height: auto;
+  }
+}
+.projBtn img {
+  width: 100%;
+}
+.projBtn span {
+  position: absolute;
+  background-color: rgba(25, 25, 25, 0.5);
+  color: white;
+  font-size: 1.2rem;
+}
+
+span p1 {
+}
+
+.projBtn:hover span {
+  transform: translateX(0%);
+}
+
+#EE {
+  background-image: url("/static/images/main/mep-plans.jpeg");
+}
+#PLC {
+  background-image: url("/static/images/main/siemens-controls.png");
+}
+.pastWork {
+  background-blend-mode: lighten;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-position: top;
+  background-size: cover;
+  background-color: rgba(245, 255, 255, 0.65);
+  width: 80vw;
+  padding: 3rem 2rem;
+  color: black;
+  margin: 20px;
+  border-radius: 25px;
+}
+
+.pastWork div {
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.apps img {
+  height: 1.5rem;
+  margin: 0.5rem;
+}
+.breaker {
+  width: 100%;
+  margin: 10px;
+}
+
+#closeBlurry {
+  position: absolute;
+  top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  background-color: transparent;
+
+  right: 8px;
+  font-size: 0.8rem;
+}
