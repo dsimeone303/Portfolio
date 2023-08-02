@@ -156,12 +156,55 @@ main section {
 
 #intropara {
   width: 90vw;
-  max-width: 800px;
+  max-width: 600px;
+  font-size: 1.2rem;
 }
 
 /*
 for pop ups
 */
+.copycontain {
+  display:flex;
+  flex-wrap:wrap;
+  background-color:white;
+  padding: 30px;
+  border: 3px solid black;
+  border-radius: 8px;
+}
+.email {
+  font-size: 1.3rem;
+  font-weight:bold;
+  background-color: white;
+  padding:.5rem;
+  margin:auto;
+  position:relative;
+}
+
+.copiedEmail::after {
+  content: "Copied!";
+  position:absolute;
+  bottom: -1.5rem;;
+  left:50%;
+  transform:translateX(-50%);
+  z-index: 1;
+  
+  
+}
+#copyE {
+  font-size: 1.3rem;
+  font-weight: bold;
+    background-color: white;
+  border: 3px solid black;
+  border-radius: 20px;
+  margin: auto;
+  margin-left: 10px;
+  padding: 5px 10px;
+}
+#copyE:hover {
+  background-color:black;
+  border-color:white;
+  color:white;
+}
 
 #blurry {
   position: absolute;

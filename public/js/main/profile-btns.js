@@ -290,10 +290,11 @@ function contactbtn(e, closeBlurry, blurry, html) {
   copycontain.classList.add("copycontain");
   const para = document.createElement("p");
   para.innerHTML = "DSIMEONE303@GMAIL.COM";
+  para.classList.add("email");
   const copyEbtn = document.createElement("button");
   copyEbtn.onclick = "tabs(this)";
   copyEbtn.classList.add("blue-bdr-btn");
-  copyEbtn.setAttribute('id','copyE');
+  copyEbtn.setAttribute("id", "copyE");
   copyEbtn.innerHTML = "Copy Email";
 
   //send it
@@ -311,7 +312,7 @@ function pastWork(e, html, closeBlurry, blurry) {
   pastWorkInfo = [
     {
       title: "Electrical Engineer",
-      id:"EE",
+      id: "EE",
       years: "[2018-Present]",
       links: [
         {
@@ -338,68 +339,75 @@ function pastWork(e, html, closeBlurry, blurry) {
           image: "/static/images/main/visualLighting.png"
         }
       ],
-      para1:"Designed electrical and lighting systems in buildings with a primary focus in commercial, K-12, and institutional buildings. Design would consists of:",
-      listItems:[
+      para1:
+        "Designed electrical and lighting systems in buildings with a primary focus in commercial, K-12, and institutional buildings. Design would consists of:",
+      listItems: [
         "Colaborating with owners, architects and suppliers for specific needs.",
         "calculating lighting designs using lighting applications to comply to local ordinance.",
         "Design and calculating a sufficent electrical distrubution system(from Boiler rooms/cooling towers to the location of the receptacle for a breakroom coffee maker).",
-        "Site Visits.", 
-        "Requiring and reviewing contractor provided equipment to ensure proper specifications are used."]
-    },{
-      title:"PLC Programmer/ Project Manager",
-      id:"PLC",
+        "Site Visits.",
+        "Requiring and reviewing contractor provided equipment to ensure proper specifications are used."
+      ]
+    },
+    {
+      title: "PLC Programmer/ Project Manager",
+      id: "PLC",
       years: "[2014-2018]",
-      links:[
+      links: [
         {
           name: "AutoCAD",
           href:
             "https://www.autodesk.com/products/autocad/overview?term=1-YEAR&tab=subscription",
           image: "/static/images/main/autoCad.png"
-        },{
-          name:"C+",
-          href:"https://en.wikipedia.org/wiki/C%2B%2B",
-          image:"/static/images/main/cplus.png"
-        },{
+        },
+        {
+          name: "C+",
+          href: "https://en.wikipedia.org/wiki/C%2B%2B",
+          image: "/static/images/main/cplus.png"
+        },
+        {
           name: "building management system",
-          href: "https://www.siemens.com/global/en/products/buildings/automation.html",
+          href:
+            "https://www.siemens.com/global/en/products/buildings/automation.html",
           image: "/static/images/main/Siemens-logo.png"
-        }],
-      para1:"HVAC Controls Project Manager is responsible for overseeing the planning, execution, and delivery of building automation projects using Siemens automation         software related to Heating, Ventilation, and Air Conditioning (HVAC) systems. With primary focus to ensure that projects are completed on time, within budget, and     to the satisfaction of the client. The primary duties for this career are:",
-      listItems:[
+        }
+      ],
+      para1:
+        "HVAC Controls Project Manager is responsible for overseeing the planning, execution, and delivery of building automation projects using Siemens automation         software related to Heating, Ventilation, and Air Conditioning (HVAC) systems. With primary focus to ensure that projects are completed on time, within budget, and     to the satisfaction of the client. The primary duties for this career are:",
+      listItems: [
         "Creating, diagnosing, and implementing programmable logic (similar to C+) algorithms for real world applications.",
         "Creating, diagnosing, implementing, and training the client Building Automation Systems (BAS) using graphical interfaces.",
         "Designing control panel layout diagrams and associated sensory information via AutoCAD.",
         "Building, installing, and implementing control panel and associated system sensors on-site.",
         "Planned, oversaw and directed large commercial projects to ensure the smooth flow of operations and compliance.",
         "Demonstrated skills in outlining timescales, costs, and resources needed to design and deliver the finished product for client use.",
-        "Managed skilled individuals that assisted in delivering a quality product on time."]
+        "Managed skilled individuals that assisted in delivering a quality product on time."
+      ]
     }
   ];
   pastWorkInfo.forEach(career => {
-  const mainContainer = document.createElement("div"),
-        title = document.createElement('h3'),
-        dates = document.createElement("span"),
-        appsText = document.createElement("spans"),
-        container = document.createElement("div"),
-        section = document.createElement("section"),
-        p = document.createElement("p"),
-        span = document.createElement("span"),
-        hr = document.createElement('hr'),
-        responsiblities = document.createElement("ul");
-    
-    
-    
-    mainContainer.classList.add('pastWork');
-    mainContainer.setAttribute('id', career.id);
-    section.classList.add('apps');
+    const mainContainer = document.createElement("div"),
+      title = document.createElement("h3"),
+      dates = document.createElement("span"),
+      appsText = document.createElement("spans"),
+      container = document.createElement("div"),
+      section = document.createElement("section"),
+      p = document.createElement("p"),
+      span = document.createElement("span"),
+      hr = document.createElement("hr"),
+      responsiblities = document.createElement("ul");
+
+    mainContainer.classList.add("pastWork");
+    mainContainer.setAttribute("id", career.id);
+    section.classList.add("apps");
     title.innerHTML = career.title;
     dates.innerHTML = career.years;
-    appsText.innerHTML = "Frequently used programs (clickable):"
+    appsText.innerHTML = "Frequently used programs (clickable):";
     //need to make a loop function for both links and listsItems
     section.append(appsText);
     career.links.forEach(link => {
-      const anchor =document.createElement("a"),
-            img = document.createElement("img");
+      const anchor = document.createElement("a"),
+        img = document.createElement("img");
       img.src = link.image;
       anchor.href = link.href;
       img.alt = link.name;
@@ -411,8 +419,8 @@ function pastWork(e, html, closeBlurry, blurry) {
       const li = document.createElement("li");
       li.innerHTML = item;
       responsiblities.append(li);
-    })
-    hr.classList.add('breaker');
+    });
+    hr.classList.add("breaker");
 
     mainContainer.append(title);
     mainContainer.append(dates);
@@ -422,24 +430,21 @@ function pastWork(e, html, closeBlurry, blurry) {
     container.append(responsiblities);
     mainContainer.append(hr);
     blurry.append(mainContainer);
-    
-    
-    
-});
-  
+  });
+
   html.append(blurry);
 }
-
 
 //copy emails
 function copyEmail(e) {
   const parentC = e.parentElement;
-  const email = parentC.children[1].innerHTML;
-  navigator.clipboard.writeText(email);
-  var styleElem = document
+  const email = parentC.children[1];
+  navigator.clipboard.writeText(email.innerHTML);
+  email.classList.add("copiedEmail");
+  /*var styleElem = document
     .getElementById("blurry")
     .appendChild(document.createElement("style"));
-  styleElem.innerHTML = ".copyE::after {display:block;}";
+  styleElem.innerHTML = ".copyE::after {display:block;}";*/
 }
 //closing popups
 function closeBlurry() {
@@ -454,8 +459,12 @@ function closeBlurry() {
 
 function redirect(e) {
   //proj links go through backend
-  const proj_link = ["/whatsthedef", "/LetsEat", "#", "/simon"];
-  const proj_id = ["Project-WTD", "Project-LEH", "Project-MH", "Project-SS"];
+  const proj_link = ["/whatsthedef", /*"#",*/ "#", "/simon"];
+  const proj_id = [
+    "Project-WTD",
+    /*"Project-LEH", */ "Project-MH",
+    "Project-SS"
+  ];
   const btn = e;
 
   for (let i = 0; i < proj_id.length; i++) {
